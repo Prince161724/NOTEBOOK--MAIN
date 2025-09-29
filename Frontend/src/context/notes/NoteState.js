@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import noteContext from './noteContext';
 
 
-const host = "http://localhost:5000";
+const host = "https://notebook-backend-feva.onrender.com";
 
 const Notesinitial = [
 ];
