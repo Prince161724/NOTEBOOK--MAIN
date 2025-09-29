@@ -35,30 +35,17 @@ const NoteItem = (props) => {
     fetchnotes();
   };
   
-
-
-    return (
-        <>
-            <div className="col-md-4 p-2">
-                <div className="card m-2">
-                    <div className="card-body">
-                        <h5 className="card-title">{title}</h5>
-                        <p className="card-text">{description}</p>
-                        <i className="fa-solid fa-pen mx-2" onClick={() => updatenote(note)
-                        }></i>
-                        <i
-                          className="fa-solid fa-trash mx-2" ref={ref}
-                          onClick={() => {
-                            updatenote2(note)
-                            Showalert("Note Deleted SuccessFully")
-                          }}
-                        ></i>
-
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="note-item">
+      <h5 style={{color:'#4f8cff'}}>{note.title}</h5>
+      <p>{note.description}</p>
+      <span style={{background:'#4f8cff',color:'#fff',borderRadius:'4px',padding:'2px 8px',fontSize:'0.9rem'}}>{note.tag}</span>
+      <div>
+        <i className="fa fa-trash mx-2" style={{color:'#ff6b6b'}} onClick={() => { updatenote2(note); Showalert("Note Deleted SuccessFully") }}></i>
+        <i className="fa fa-edit mx-2" style={{color:'#4f8cff'}} onClick={() => updatenote(note)}></i>
+      </div>
+    </div>
+  );
 }
 
 export default NoteItem;

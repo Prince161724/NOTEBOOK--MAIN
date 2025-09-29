@@ -3,10 +3,10 @@ import noteContext from '../context/notes/noteContext';
 
 const Alert=(props)=>{
     const {alert,Showalert}=useContext(noteContext);
-    return(
-        <>{alert && <div className="alert alert-primary" role="alert" >{alert}
-</div>}
-        </>
+    return (
+        alert && <div className="alert">
+            {alert}
+        </div>
     )
 }
 
