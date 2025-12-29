@@ -18,7 +18,7 @@ app.get('/check', (req, res) => {
 app.use('/api/auth',require('./routes/auth.js'));
 app.use('/api/notes',require('./routes/notes.js'));
 app.get('/health',(req,res)=>{
-  return res.json({hello:good});
+  return res.json({hello:"good"});
 }
 
 const PORT = process.env.PORT || 5000;
